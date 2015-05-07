@@ -1,0 +1,41 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chat Client" Height="418" Width="525" Closed="MainWindow_Closed" ResizeMode="NoResize">
+    <Grid>
+        <Label Margin="81,27,381,317" RenderTransformOrigin="-0.302,0.5">Login:</Label>
+        <TextBox Margin="141,27,166,332" 
+                 Name="Login"></TextBox>
+        <Label Margin="71,70,376,279">Server IP:</Label>
+        <TextBox Name="serverIP" 
+                 Margin="141,70,166,289"></TextBox>
+        <Button Margin="141,145,166,200" 
+                Name="ConnectBtn" 
+                Click="ConnectBtn_Click">Go!</Button>
+        <Label Name="LoginRequire" 
+               Margin="189,103,230,247" 
+               Visibility="Hidden" 
+               Foreground="Red">Login Reguire</Label>
+        <Label Name="IPRequire" 
+               Margin="211,103,208,247" 
+               Visibility="Hidden" 
+               Foreground="Red">IP Reguire</Label>
+        <Label Name="ValidIPRequire" 
+               Margin="196,103,208,247" 
+               Visibility="Hidden" 
+               Foreground="Red">Valid IP Reguire</Label>
+        <Button Margin="10,321,381,40" 
+                Name="SendBtn"
+                IsEnabled="False" Click="SendBtn_Click">Send</Button>
+        <!--<Border BorderThickness="1" Margin="141,212,10,70" BorderBrush="Gray">
+            <TextBlock Name="MsgBoard" Margin="141,212,10,70"></TextBlock>
+        </Border>-->
+        <ScrollViewer Name="MsgBoardScroll" Margin="141,212,10,70">
+            <TextBox Name="MsgBoard" IsEnabled="False" ></TextBox>
+        </ScrollViewer>
+        <!--<TextBox Name="MsgBoard" Margin="141,212,10,70" IsEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>-->
+        
+        <TextBox Margin="141,321,10,40" 
+                 Name="Msg"></TextBox>
+    </Grid>
+</Window>
